@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document lang="English">
+    <Invoice>
+        <InvParty>
+            <Name SensitiveTag="NAME">Ankit Arora</Name>
+            <GivenNames SensitiveTag="NAME">Ankit</GivenNames>
+            <MiddleNames SensitiveTag="MIDDLE-NAME"/>
+            <FamilyNamePrefix SensitiveTag="LAST-NAME"/>
+            <FamilyNames SensitiveTag="LAST-NAME">Arora</FamilyNames>
+            <Address/>
+        </InvParty>
+        <InvHeader>
+            <InvoiceType>Regular</InvoiceType>
+            <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+            <BillingMode>OFF_CYCLE</BillingMode>
+            <Reason>AC04</Reason>
+            <TaxCalculationType>I</TaxCalculationType>
+            <RefNumber SensitiveTag="INVOICE-IDENTIFIER">OffCycle-1000001-1</RefNumber>
+            <DocType>INV</DocType>
+            <DocFormatType Format="PDF" TemplateId="e56dbeab-ef24-4394-8a33-5459d8babe62"/>
+            <DateCreated>2020-07-22T09:42:00.939+02:00</DateCreated>
+            <PeriodStart>2020-07-22T09:39:45.526+02:00</PeriodStart>
+            <PeriodEnd>2020-07-22T09:41:56.400+02:00</PeriodEnd>
+            <MailingDate>2020-07-22T09:42:00.939+02:00</MailingDate>
+            <DueDate>2020-07-24T09:42:00.939+02:00</DueDate>
+            <Currency>usd</Currency>
+            <Totals>
+                <MonAmnt Type="InvoiceAmount" Currency="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</MonAmnt>
+                <MonAmnt Type="TaxAmount" Currency="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">15.517242</MonAmnt>
+                <MonAmnt Type="TaxOnTaxAmount" Currency="usd" NrDecimals="0" SensitiveTag="TRANSACTION-AMOUNT">0</MonAmnt>
+                <MonAmnt Type="ExemptedTaxAmount" Currency="usd" NrDecimals="1" SensitiveTag="TRANSACTION-AMOUNT">0.0</MonAmnt>
+                <MonAmnt Type="TotalAmount" Currency="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">50.000000</MonAmnt>
+                <MonAmnt Type="DueAmount" Currency="usd" NrDecimals="0" SensitiveTag="TRANSACTION-AMOUNT">50</MonAmnt>
+            </Totals>
+            <Dates>
+                <Date Type="PERIOD_START" Zone="Europe/Stockholm">2020-07-22T09:39:45.526+02:00</Date>
+                <Date Type="PERIOD_END" Zone="Europe/Stockholm">2020-07-22T09:41:56.400+02:00</Date>
+                <Date Type="DATE_CREATED" Zone="Europe/Stockholm">2020-07-22T09:42:00.939+02:00</Date>
+                <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T09:42:00.939+02:00</Date>
+                <Date Type="MAILING_DATE" Zone="Europe/Stockholm">2020-07-22T09:42:00.939+02:00</Date>
+            </Dates>
+        </InvHeader>
+        <Customer CustomerExternalId="9910995787">
+            <TimeZones>
+                <TimeZone>
+                    <ValidFrom>2020-05-10T03:00:01.000+02:00</ValidFrom>
+                    <Name>Europe/Stockholm</Name>
+                </TimeZone>
+            </TimeZones>
+        </Customer>
+        <Contracts>
+            <Contract ContractExternalId="9910995787">
+                <Products>
+                    <Product Id="5834CF1010B54D5EAEA98B31195B44CA">
+                        <Name>PODepositCharge01</Name>
+                        <Description></Description>
+                        <Statuses>
+                            <Status FromDate="2020-05-10T03:00:01.000+02:00" ToDate="2020-07-22T09:41:56.400+02:00">ProductActive</Status>
+                            <Status FromDate="2020-05-10T03:00:01.000+02:00" ToDate="2020-07-22T09:41:56.400+02:00">ProductActive</Status>
+                        </Statuses>
+                    </Product>
+                </Products>
+                <Cbis>
+                    <Cbi AggLevel="1">
+                        <PriceType>onetime</PriceType>
+                        <FeeType>DepositCharge</FeeType>
+                        <Product Id="5834CF1010B54D5EAEA98B31195B44CA">
+                            <Name>PODepositCharge01</Name>
+                        </Product>
+                        <ContractExternalId>9910995787</ContractExternalId>
+                        <CbcId>20200601-20200701</CbcId>
+                        <Apop ApopId="f505d1a0bfe3e4ae3a1d786be048244c"/>
+                        <CpopId>a909d27ffcaf64352be77da3b2b9c886</CpopId>
+                        <PaId>eef0238b963c593c94673489542f164e</PaId>
+                        <Buckets>
+                            <Bucket>
+                                <bucketInfo ValueType="CHARGE" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                <SubBuckets>
+                                    <SubBucket BucketId="DFBCF65CA6C344EE921A11B176985532" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</SubBucket>
+                                </SubBuckets>
+                            </Bucket>
+                        </Buckets>
+                        <Ctbis>
+                            <Ctbi>
+                                <TaxJurisdictionType>State</TaxJurisdictionType>
+                                <TaxType>VAT</TaxType>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">5.172414</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxDetails>
+                                    <TaxDetail TaxCode="VAT01">
+                                        <TaxCodeName>Value Added Tax 01</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">5.172414</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>15.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                </TaxDetails>
+                            </Ctbi>
+                            <Ctbi>
+                                <TaxJurisdictionType>State</TaxJurisdictionType>
+                                <TaxType>ST</TaxType>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">10.344828</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxDetails>
+                                    <TaxDetail TaxCode="SBT01">
+                                        <TaxCodeName>Specific Business Tax</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">6.896552</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>20.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                    <TaxDetail TaxCode="ST01">
+                                        <TaxCodeName>Service Tax 01</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">3.448276</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>10.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                </TaxDetails>
+                            </Ctbi>
+                        </Ctbis>
+                        <ConsolidatedEvents>
+                            <ConsolidatedEvent>
+                                <Date Type="START_OF_CALL" Zone="Europe/Stockholm" SensitiveTag="TIME-OF-CALL">2020-06-06T10:53:33.678+02:00</Date>
+                                <Characteristics>
+                                    <Characteristic key="START_OF_CALL" SensitiveTag="TIME-OF-CALL">2020-06-06T10:53:33.678+02:00</Characteristic>
+                                </Characteristics>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="CHARGE" UoM="usd" NrDecimals="0" SensitiveTag="TRANSACTION-AMOUNT">50</bucketInfo>
+                                        <SubBuckets>
+                                            <SubBucket ValueType="CHARGE" NrDecimals="0" SensitiveTag="TRANSACTION-AMOUNT">50</SubBucket>
+                                        </SubBuckets>
+                                    </Bucket>
+                                </Buckets>
+                            </ConsolidatedEvent>
+                        </ConsolidatedEvents>
+                    </Cbi>
+                    <Cbi AggLevel="2">
+                        <PriceType>onetime</PriceType>
+                        <FeeType>DepositCharge</FeeType>
+                        <Product Id="5834CF1010B54D5EAEA98B31195B44CA">
+                            <Name>PODepositCharge01</Name>
+                        </Product>
+                        <ContractExternalId>9910995787</ContractExternalId>
+                        <Buckets>
+                            <Bucket>
+                                <bucketInfo ValueType="CHARGE" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                <SubBuckets>
+                                    <SubBucket BucketId="DFBCF65CA6C344EE921A11B176985532" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</SubBucket>
+                                </SubBuckets>
+                            </Bucket>
+                        </Buckets>
+                        <Ctbis>
+                            <Ctbi>
+                                <TaxJurisdictionType>State</TaxJurisdictionType>
+                                <TaxType>VAT</TaxType>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">5.172414</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxDetails>
+                                    <TaxDetail TaxCode="VAT01">
+                                        <TaxCodeName>Value Added Tax 01</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">5.172414</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>15.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                </TaxDetails>
+                            </Ctbi>
+                            <Ctbi>
+                                <TaxJurisdictionType>State</TaxJurisdictionType>
+                                <TaxType>ST</TaxType>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">10.344828</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxDetails>
+                                    <TaxDetail TaxCode="SBT01">
+                                        <TaxCodeName>Specific Business Tax</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">6.896552</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>20.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                    <TaxDetail TaxCode="ST01">
+                                        <TaxCodeName>Service Tax 01</TaxCodeName>
+                                        <TaxDetailVersions>
+                                            <TaxDetailVersion>
+                                                <FromDate>2020-07-22</FromDate>
+                                                <ToDate>2020-07-22</ToDate>
+                                                <RateType>FLAT</RateType>
+                                                <RateValueType>PERCENT</RateValueType>
+                                                <GLCode></GLCode>
+                                                <Buckets>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">3.448276</bucketInfo>
+                                                    </Bucket>
+                                                    <Bucket>
+                                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                                    </Bucket>
+                                                </Buckets>
+                                                <TaxCodeRateInformations>
+                                                    <TaxCodeRateInformation>
+                                                        <TaxRate>10.0</TaxRate>
+                                                    </TaxCodeRateInformation>
+                                                </TaxCodeRateInformations>
+                                            </TaxDetailVersion>
+                                        </TaxDetailVersions>
+                                    </TaxDetail>
+                                </TaxDetails>
+                            </Ctbi>
+                        </Ctbis>
+                    </Cbi>
+                </Cbis>
+            </Contract>
+        </Contracts>
+        <Cbis/>
+        <Ctsbis>
+            <Ctsbi AggLevel="1">
+                <Buckets>
+                    <Bucket>
+                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">15.517242</bucketInfo>
+                    </Bucket>
+                    <Bucket>
+                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482758</bucketInfo>
+                    </Bucket>
+                </Buckets>
+                <TaxDetails>
+                    <TaxDetail TaxCode="SBT01">
+                        <TaxCodeName>Specific Business Tax</TaxCodeName>
+                        <TaxDetailVersions>
+                            <TaxDetailVersion>
+                                <FromDate>2020-07-22</FromDate>
+                                <ToDate>2020-07-22</ToDate>
+                                <RateType>FLAT</RateType>
+                                <RateValueType>PERCENT</RateValueType>
+                                <GLCode></GLCode>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">6.896552</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>20.0</TaxRate>
+                                    </TaxCodeRateInformation>
+                                </TaxCodeRateInformations>
+                            </TaxDetailVersion>
+                        </TaxDetailVersions>
+                    </TaxDetail>
+                    <TaxDetail TaxCode="ST01">
+                        <TaxCodeName>Service Tax 01</TaxCodeName>
+                        <TaxDetailVersions>
+                            <TaxDetailVersion>
+                                <FromDate>2020-07-22</FromDate>
+                                <ToDate>2020-07-22</ToDate>
+                                <RateType>FLAT</RateType>
+                                <RateValueType>PERCENT</RateValueType>
+                                <GLCode></GLCode>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">3.448276</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>10.0</TaxRate>
+                                    </TaxCodeRateInformation>
+                                </TaxCodeRateInformations>
+                            </TaxDetailVersion>
+                        </TaxDetailVersions>
+                    </TaxDetail>
+                    <TaxDetail TaxCode="VAT01">
+                        <TaxCodeName>Value Added Tax 01</TaxCodeName>
+                        <TaxDetailVersions>
+                            <TaxDetailVersion>
+                                <FromDate>2020-07-22</FromDate>
+                                <ToDate>2020-07-22</ToDate>
+                                <RateType>FLAT</RateType>
+                                <RateValueType>PERCENT</RateValueType>
+                                <GLCode></GLCode>
+                                <Buckets>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAX_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">5.172414</bucketInfo>
+                                    </Bucket>
+                                    <Bucket>
+                                        <bucketInfo ValueType="TAXABLE_AMOUNT" UoM="usd" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">34.482759</bucketInfo>
+                                    </Bucket>
+                                </Buckets>
+                                <TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>15.0</TaxRate>
+                                    </TaxCodeRateInformation>
+                                </TaxCodeRateInformations>
+                            </TaxDetailVersion>
+                        </TaxDetailVersions>
+                    </TaxDetail>
+                </TaxDetails>
+            </Ctsbi>
+        </Ctsbis>
+    </Invoice>
+    <FinancialTransactions>
+        <FinancialTransactionGroups>
+            <FinancialTransactionGroup>
+                <FinancialHeaderType>Invoice</FinancialHeaderType>
+                <FinancialHeaders>
+                    <FinancialHeader TransactionId="275341f0-4391-4fa0-8cdc-78b69eefe698" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">9910995787</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>OPEN</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-07-22T08:02:51.158+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-07-22T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">60.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">60.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">60.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="usd" SensitiveTag="NONE">41.379310</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">AC04</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-07-22T06:02:32.891Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-999961-1</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="185fecec-2945-4d05-be91-5f05d777ba00" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">9910995787</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>CLOSED</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-07-22T08:06:08.708+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-07-22T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="USD" SensitiveTag="NONE">0.0</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">AC04</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-07-22T06:05:52.267Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-999971-1</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="bea0243b-afdc-427c-b641-79659c0da5c0" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">9910995787</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>OPEN</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-07-22T09:27:01.972+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-07-22T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">100.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">100.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">100.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="usd" SensitiveTag="NONE">68.965517</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">AC04</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-07-22T07:26:34.571Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-999981-1</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="de224316-010e-4c99-96aa-830a3ebbc657" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">9910995787</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>OPEN</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-07-22T09:40:09.012+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-07-22T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="usd" SensitiveTag="NONE">34.482758</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">AC04</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-07-22T07:39:45.526Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-999991-1</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="0efc788b-5fc3-4bb5-b9f8-689d881c5124" TransactionGroups="">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">9910995787</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>OPEN</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-07-24T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-07-22T09:42:24.278+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-07-22T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">50.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="usd" SensitiveTag="NONE">34.482758</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">AC04</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-07-22T07:41:57.400Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-1000001-1</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                </FinancialHeaders>
+            </FinancialTransactionGroup>
+        </FinancialTransactionGroups>
+    </FinancialTransactions>
+</Document>
