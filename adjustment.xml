@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Document lang="English">
+    <Invoice>
+        <InvParty>
+            <Name>
+                <Name SensitiveTag="NAME">Ankit Arora</Name>
+                <GivenNames SensitiveTag="NAME">Ankit</GivenNames>
+                <MiddleNames SensitiveTag="MIDDLE-NAME"/>
+                <FamilyNamePrefix SensitiveTag="LAST-NAME"/>
+                <FamilyNames SensitiveTag="LAST-NAME">Arora</FamilyNames>
+            </Name>
+            <Address/>
+        </InvParty>
+        <InvHeader>
+            <InvoiceType>Regular</InvoiceType>
+            <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+            <BillingMode>OFF_CYCLE</BillingMode>
+            <Reason>ON_DEMAND_INV_CUSTOMER_REQUEST</Reason>
+            <TaxCalculationType>I</TaxCalculationType>
+            <RefNumber SensitiveTag="INVOICE-IDENTIFIER">OffCycle-30-3</RefNumber>
+            <DocType>INV</DocType>
+            <DocFormatType Format="PDF" TemplateId="5ed3f6f2-e029-408e-878d-efd84e95df3d"/>
+            <DocFormatType Format="PDF" TemplateId="5ed3f6f2-e029-408e-878d-efd84e95df3d"/>
+            <DocFormatType Format="PDF" TemplateId="5ed3f6f2-e029-408e-878d-efd84e95df3d"/>
+            <DocFormatType Format="PDF" TemplateId="5ed3f6f2-e029-408e-878d-efd84e95df3d"/>
+            <DateCreated>2020-09-04T07:39:03.180+02:00</DateCreated>
+            <PeriodStart>2020-03-01T01:00:00.000+01:00</PeriodStart>
+            <PeriodEnd>2020-09-04T07:38:57.762+02:00</PeriodEnd>
+            <MailingDate>2020-09-04T07:39:03.180+02:00</MailingDate>
+            <DueDate>2020-09-04T07:39:03.180+02:00</DueDate>
+            <Currency>USD</Currency>
+            <Totals>
+                <MonAmnt Type="InvoiceAmount" Currency="USD" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">0.000000</MonAmnt>
+                <MonAmnt Type="TaxAmount" Currency="USD" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">0.000000</MonAmnt>
+                <MonAmnt Type="TaxOnTaxAmount" Currency="USD" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">0.000000</MonAmnt>
+                <MonAmnt Type="ExemptedTaxAmount" Currency="USD" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">0.000000</MonAmnt>
+                <MonAmnt Type="TotalAmount" Currency="USD" NrDecimals="6" SensitiveTag="TRANSACTION-AMOUNT">0.000000</MonAmnt>
+                <MonAmnt Type="DueAmount" Currency="usd" NrDecimals="0" SensitiveTag="TRANSACTION-AMOUNT">0</MonAmnt>
+            </Totals>
+            <Dates>
+                <Date Type="PERIOD_START" Zone="Europe/Stockholm">2020-03-01T01:00:00.000+01:00</Date>
+                <Date Type="PERIOD_END" Zone="Europe/Stockholm">2020-09-04T07:38:57.762+02:00</Date>
+                <Date Type="DATE_CREATED" Zone="Europe/Stockholm">2020-09-04T07:39:03.180+02:00</Date>
+                <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-09-04T07:39:03.180+02:00</Date>
+                <Date Type="MAILING_DATE" Zone="Europe/Stockholm">2020-09-04T07:39:03.180+02:00</Date>
+            </Dates>
+        </InvHeader>
+        <Customer CustomerExternalId="390000390007">
+            <TimeZones>
+                <TimeZone>
+                    <ValidFrom>2019-11-10T02:00:01.000+01:00</ValidFrom>
+                    <Name>Europe/Stockholm</Name>
+                </TimeZone>
+            </TimeZones>
+        </Customer>
+        <Contracts>
+            <Contract ContractExternalId="390000390007">
+                <Characteristic key="70187A9F5823474581FAD6292917E168"/>
+                <Characteristic key="575C5AFDA7A240AA9DCD4791457A1CFE">1</Characteristic>
+                <Characteristic key="EEED08655B414257A7764F8FDF714678">1</Characteristic>
+                <Characteristic key="D51070E75346403F8334AE83FEE8410A">2019-11-10T01:00:01.000Z</Characteristic>
+                <Products>
+                    <Product Id="179F0238B3AC4D5F9DA469B2618118FC">
+                        <Name>SanityPO1</Name>
+                        <Description></Description>
+                        <Statuses>
+                            <Status FromDate="2019-11-10T02:00:01.000+01:00" ToDate="2020-09-04T07:38:57.762+02:00">ProductActive</Status>
+                            <Status FromDate="2019-11-10T02:00:01.000+01:00" ToDate="2020-09-04T07:38:57.762+02:00">ProductActive</Status>
+                        </Statuses>
+                    </Product>
+                    <Product Id="72CDD7D29E4C402DA21612FE451FB16E">
+                        <Name>SharingPO</Name>
+                        <Description></Description>
+                        <Statuses>
+                            <Status FromDate="2019-11-10T02:00:01.000+01:00" ToDate="2020-09-04T07:38:57.762+02:00">ProductActive</Status>
+                            <Status FromDate="2019-11-10T02:00:01.000+01:00" ToDate="2020-09-04T07:38:57.762+02:00">ProductActive</Status>
+                        </Statuses>
+                    </Product>
+                </Products>
+                <Cbis/>
+            </Contract>
+        </Contracts>
+        <Cbis/>
+    </Invoice>
+    <FinancialTransactions>
+        <FinancialTransactionGroups>
+            <FinancialTransactionGroup>
+                <FinancialHeaderType>Payment</FinancialHeaderType>
+                <FinancialHeaders>
+                    <FinancialHeader TransactionId="6a144da5-4669-49e1-8680-dc1fb11510d4" TransactionGroups="BILLINGPERIOD">
+                        <TransactionSource>efwerwer76867876</TransactionSource>
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">390000390007</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>CLOSED</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-09-04T07:11:00.030+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-09-04T07:10:42.535+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">asdasd4534</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                </FinancialHeaders>
+            </FinancialTransactionGroup>
+            <FinancialTransactionGroup>
+                <FinancialHeaderType>Invoice</FinancialHeaderType>
+                <FinancialHeaders>
+                    <FinancialHeader TransactionId="cb91fd57-9df6-4bd2-8fd8-7d92430370b6" TransactionGroups="">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">390000390007</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>CLOSED</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-09-04T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-09-04T07:39:20.548+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-09-04T02:00:00.000+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">OFF_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="USD" SensitiveTag="NONE">0.000000</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="Reason" description="The reason of Invoice" purpose="REASON" SensitiveTag="NONE">ON_DEMAND_INV_CUSTOMER_REQUEST</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-09-04T05:38:58.762Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OffCycle-30-3</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="b941ffcd-4908-413d-8393-8f853a032141" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">390000390007</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>OPEN</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="DUE_DATE" Zone="Europe/Stockholm">2020-09-02T02:00:00.000+02:00</Date>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-08-31T16:13:25.484+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-03-01T01:00:00.000+01:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">11.15</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">68.15</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">68.15</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="BillMode" description="Bill Mode" purpose="BILL_MODE" SensitiveTag="NONE">ON_CYCLE</Characteristic>
+                            <Characteristic key="BillAmount" description="Bill Amount" purpose="BILL_AMOUNT" UoM="usd" SensitiveTag="NONE">47.000000</Characteristic>
+                            <Characteristic key="TaxCalculationType" description="Tax Calculation Type" purpose="TAX_CALCULATION_TYPE" SensitiveTag="NONE">I</Characteristic>
+                            <Characteristic key="InvoiceType" description="The type of Invoice" purpose="INVOICE_TYPE" SensitiveTag="NONE">Regular</Characteristic>
+                            <Characteristic key="BillingEndDate" description="Billing End Date for Invoice" SensitiveTag="NONE">2020-03-01T00:00:00.000Z</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">OnCycle-17-3</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                </FinancialHeaders>
+            </FinancialTransactionGroup>
+            <FinancialTransactionGroup>
+                <FinancialHeaderType>adjustment</FinancialHeaderType>
+                <FinancialHeaders>
+                    <FinancialHeader TransactionId="c0761a01-8fed-4aa2-bbd2-b6569bba67f6" TransactionGroups="BILLINGPERIOD">
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">390000390007</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>CLOSED</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-09-04T07:09:48.712+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-09-04T07:09:15.431+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">34.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">34.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderCharacteristics>
+                            <Characteristic key="ReasonCode" description="Reason code as defined by COBA" SensitiveTag="NONE">HARDSHIP</Characteristic>
+                            <Characteristic key="amountType" description="The amount type of the related transaction" purpose="AMOUNT_TYPE" SensitiveTag="NONE">GROSS</Characteristic>
+                            <Characteristic key="EffectiveAdjustmentDate" description="Effective End Date for Adjustment" SensitiveTag="NONE">2020-09-04T00:00:00.000Z</Characteristic>
+                            <Characteristic key="Description" description="Description for Adjustment" SensitiveTag="NONE">sdfsfgdgfghj</Characteristic>
+                        </FinancialHeaderCharacteristics>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">1231312345357</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                </FinancialHeaders>
+            </FinancialTransactionGroup>
+        </FinancialTransactionGroups>
+    </FinancialTransactions>
+</Document>
+
+Thank You
+Kanishk Kumar

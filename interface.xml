@@ -1,0 +1,175 @@
+<InvoiceType>TypeOfBill</InvoiceType>
+<PeriodStart>BillStartDate</PeriodStart>
+<PeriodEnd>BillEndDate</PeriodEnd>
+<Totals>
+	<MonAmnt Type="InvoiceAmount">InvoiceAmount</MonAmnt>
+</Totals>
+<Totals>
+	<MonAmnt Type="TaxAmount">Tax</MonAmnt>
+</Totals>
+<Totals>
+	<MonAmnt Type="TaxOnTaxAmount">TaxOnTax</MonAmnt>
+</Totals>
+<Totals>
+	<MonAmnt Type="ExemptedTaxAmount">ExemptedTax</MonAmnt>
+</Totals>
+<Totals>
+	<MonAmnt Type="TotalAmount">TotalAmount</MonAmnt>
+</Totals>
+ <Contracts>
+	<Contract action="count">NoOfContracts</Contract>
+ </Contracts>
+ <Contracts>
+    <Contract>
+		<Products>
+               <Product action="count"> NoOfProducts </Product>
+		</Products>
+	</Contract>
+<Contracts>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="SBT01">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">SBT01</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="CESSTax">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">CESSTax</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="ST">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">ST</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="ST01">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">ST01</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="EducationTax">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">EducationTax</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="VAT01">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">VAT01</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
+<Ctsbis>
+       <Ctsbi AggLevel="1">
+	   <TaxDetails>
+            <TaxDetail TaxCode="ToT">
+				<TaxDetailVersions>
+                    <TaxDetailVersion>
+						<Buckets>
+                             <Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT">ToT</bucketInfo>
+								</Bucket>
+						</Buckets>
+						<TaxCodeRateInformations>
+                                    <TaxCodeRateInformation>
+                                        <TaxRate>TaxRate</TaxRate>
+                                    </TaxCodeRateInformation>
+                         </TaxCodeRateInformations>
+					</TaxDetailVersion>
+				</TaxDetailVersions>
+			</TaxDetail>
+		</TaxDetails>
+<Ctsbis>
