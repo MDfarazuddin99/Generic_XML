@@ -1,3 +1,4 @@
+<Interface>
 <InvoiceType>TypeOfBill</InvoiceType>
 <PeriodStart>BillStartDate</PeriodStart>
 <PeriodEnd>BillEndDate</PeriodEnd>
@@ -25,29 +26,29 @@
                <Product action="count"> NoOfProducts </Product>
 		</Products>
 	</Contract>
-<Contracts>
+</Contracts>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
-            <TaxDetail TaxCode="SBT01">
+      <TaxDetail TaxCode="SBT01">
 				<TaxDetailVersions>
-                    <TaxDetailVersion>
-						<Buckets>
-                             <Bucket>
-                                <bucketInfo ValueType="TAX_AMOUNT">SBT01</bucketInfo>
-								</Bucket>
-						</Buckets>
+            <TaxDetailVersion>
+								<Buckets>
+		               <Bucket>
+                        <bucketInfo ValueType="TAX_AMOUNT">SBT01</bucketInfo>
+										</Bucket>
+								</Buckets>
 						<TaxCodeRateInformations>
-                                    <TaxCodeRateInformation>
-                                        <TaxRate>TaxRate</TaxRate>
-                                    </TaxCodeRateInformation>
-                         </TaxCodeRateInformations>
+                  <TaxCodeRateInformation>
+                      <TaxRate>TaxRate</TaxRate>
+                  </TaxCodeRateInformation>
+             </TaxCodeRateInformations>
 					</TaxDetailVersion>
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-	</ctsbi>
-<Ctsbis>
+	</Ctsbi>
+</Ctsbis>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
@@ -68,7 +69,8 @@
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-<Ctsbis>
+		</Ctsbi>
+</Ctsbis>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
@@ -89,7 +91,8 @@
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-<Ctsbis>
+		</Ctsbi>
+</Ctsbis>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
@@ -110,7 +113,8 @@
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-<Ctsbis>
+		</Ctsbi>
+</Ctsbis>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
@@ -131,7 +135,8 @@
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-<Ctsbis>
+		</Ctsbi>
+</Ctsbis>
 <Ctsbis>
        <Ctsbi AggLevel="1">
 	   <TaxDetails>
@@ -152,25 +157,28 @@
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
+		</Ctsbi>
+</Ctsbis>
 <Ctsbis>
-<Ctsbis>
-       <Ctsbi AggLevel="1">
+   <Ctsbi AggLevel="1">
 	   <TaxDetails>
-            <TaxDetail TaxCode="ToT">
+        <TaxDetail TaxCode="ToT">
 				<TaxDetailVersions>
-                    <TaxDetailVersion>
+            <TaxDetailVersion>
 						<Buckets>
                              <Bucket>
-                                <bucketInfo ValueType="TAX_AMOUNT">ToT</bucketInfo>
-								</Bucket>
+                                <bucketInfo ValueType="TAX_AMOUNT"> ToT </bucketInfo>
+															</Bucket>
 						</Buckets>
 						<TaxCodeRateInformations>
                                     <TaxCodeRateInformation>
                                         <TaxRate>TaxRate</TaxRate>
                                     </TaxCodeRateInformation>
-                         </TaxCodeRateInformations>
+             </TaxCodeRateInformations>
 					</TaxDetailVersion>
 				</TaxDetailVersions>
 			</TaxDetail>
 		</TaxDetails>
-<Ctsbis>
+		</Ctsbi>
+</Ctsbis>
+</Interface>
