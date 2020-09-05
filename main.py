@@ -6,6 +6,8 @@ root = tree.getroot()
 
 for element in root.iter():
     print(element.tag,',',element.attrib,'=',element.text)
+# for element in root.iter():
+#     print(element.tag,',',element.attrib,'=',element.text)
 
 path = input()
 a = root.findall(path)
@@ -20,3 +22,5 @@ print(csv)
 csv = pd.DataFrame(csv,index=[0])
 file_name = input()
 csv.to_csv('{}.csv'.format(file_name))
+for child in root.iter('MonAmnt'):
+    print(child.tag,child.attrib,child.tag)
