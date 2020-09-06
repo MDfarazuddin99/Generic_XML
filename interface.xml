@@ -17,7 +17,7 @@
 <Totals>
 	<MonAmnt Type="TotalAmount">TotalAmount</MonAmnt>
 </Totals>
- <Contracts>
+<Contracts>
 	<Contract action="count">NoOfContracts</Contract>
  </Contracts>
  <Contracts>
