@@ -20,7 +20,7 @@
 <Contracts>
 	<Contract action="count">NoOfContracts</Contract>
  </Contracts>
- <Contracts>
+<Contracts>
     <Contract>
 		<Products>
                <Product action="count"> NoOfProducts </Product>
