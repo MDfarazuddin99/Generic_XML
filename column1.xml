@@ -1,0 +1,8 @@
+<Invoice>
+  <InvHeader>
+    <Totals>
+      <MonAmnt Type="TaxAmount">3</MonAmnt>
+      <MonAmnt Type="InvoiceAmount">2</MonAmnt>
+    </Totals>
+  </InvHeader>
+</Invoice>
