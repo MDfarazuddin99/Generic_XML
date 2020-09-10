@@ -2,7 +2,7 @@
 <Invoice>
   <InvHeader>
     <Totals>
-      <MonAmnt Type="DueAmount" >TaxAmount</MonAmnt>
+      <MonAmnt Type="InvoiceAmount">InvoiceAmount</MonAmnt>
     </Totals>
   </InvHeader>
 </Invoice>

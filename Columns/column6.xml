@@ -1,0 +1,21 @@
+<Document>
+  <Invoice>
+      <Ctsbis>
+        <Ctsbi AggLevel="1">
+            <TaxDetails>
+              <TaxDetail TaxCode="SBT01">
+                <TaxDetailVersions>
+                  <TaxDetailVersion>
+                  <Buckets>
+                    <Bucket>
+                      <bucketInfo ValueType="TAX_AMOUNT">SBT01</bucketInfo>
+                    </Bucket>
+                  </Buckets>
+                  </TaxDetailVersion>
+                </TaxDetailVersions>
+              </TaxDetail>
+            </TaxDetails>
+        </Ctsbi>
+      </Ctsbis>
+  </Invoice>
+</Document>
