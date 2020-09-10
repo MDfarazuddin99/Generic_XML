@@ -1,7 +1,0 @@
-<Invoice>
-  <Customer>
-    <Contracts>
-      <Contract action="count">NoOfContracts</Contract>
-    </Contracts>
-  </Customer>
-</Invoice>

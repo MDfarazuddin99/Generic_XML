@@ -1,0 +1,9 @@
+<Document>
+  <Invoice>
+    <InvHeader>
+      <Dates>
+        <Date Type="PERIOD_START" >PeriodStart</Date>
+      </Dates>
+    </InvHeader>
+  </Invoice>
+</Document>

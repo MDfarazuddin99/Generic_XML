@@ -1,0 +1,9 @@
+<Document>
+<Invoice>
+  <InvHeader>
+    <Totals>
+      <MonAmnt Type="DueAmount" >TaxAmount</MonAmnt>
+    </Totals>
+  </InvHeader>
+</Invoice>
+</Document>
