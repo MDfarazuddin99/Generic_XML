@@ -17,29 +17,33 @@ def get_root_elements(path_to_file):
 def get_path(element):
     to_remove = ['[document]', 'body', 'html']
     path = [element.name] + [e.name for e in element.parents if e.name not in to_remove]
+    attribs = list()
+    for e in element.parents:
+         if e.name not in to_remove:
+            # print(e.attrs)
+            attribs.append(e.attrs)
+
     path = path[::-1]
     del path[0]
-    attribs = [element.attrs] + [e.name for e in element.parents if e.name not in to_remove]
-    attribs = attribs[::-1]
+    attribs += [element.attrs]
+    # print(attribs)
     del attribs[0]
     xpath = ''
     for index,val in enumerate(path):
         xpath += path[index]
-        try:
-            for key,val in attribs[index].items():
-                xpath += '[@' + str(str(key) + '=\"' + str(val) + '\"]')
-        except:
-            xpath += '/'
+        for key,val in attribs[index].items():
+            xpath += '[@' + str(str(key) + '=\"' + str(val) + '\"]')
+        xpath += '/'
     return xpath
 
 
 if __name__ == "__main__":
         file = 'Columns/column7.xml'
         roots = get_root_elements(file)
-        print(roots)
+        # print(roots)
         tree = ET.parse(file)
         b = tree.getroot()
         for root in roots:
             a = get_path(root)
             print(a)
-            print(b.find(a).attrib)
+            # print(b.find(a).attrib)
