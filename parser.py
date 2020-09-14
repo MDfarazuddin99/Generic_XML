@@ -1,32 +1,27 @@
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 def get_root_elements(path_to_file):
-    soup = BeautifulSoup(open(path_to_file), 'xml')
+    soup = BeautifulSoup(open(path_to_file), 'lxml')
     all_elements = soup.find_all()
-
     count_element_indices = [len(list(a.parents)) for a in all_elements]
+    leaf_element_indices = list()
 
-    absolute_roots_index = min(
-        (index for index, element in enumerate(count_element_indices)
-            if element == max(count_element_indices)
-        )
-    )
+    for index,i in enumerate(all_elements):
+        if len(i.findChildren()) == 0:
+            leaf_element_indices.append(index)
+    leaf_elements = [all_elements[i] for i in leaf_element_indices]
 
-    return all_elements[absolute_roots_index:]
+    return leaf_elements
 
 def get_path(element):
-    to_remove = ['[document]', 'body', 'html']
-    path = [element.name] + [e.name for e in element.parents if e.name not in to_remove]
-    attribs = list()
-    for e in element.parents:
-         if e.name not in to_remove:
-            # print(e.attrs)
-            attribs.append(e.attrs)
-
+    to_remove = ['document', 'body', 'html']
+    path = [element.name]+ [e.name for e in element.parents if e.name not in to_remove]
+    if 'action' in element.attrs.keys():
+        element.attrs.pop('action')
+    attribs = [element.attrs] + [e.attrs for e in element.parents if e.name not in to_remove]
     path = path[::-1]
+    attribs = attribs[::-1]
     del path[0]
-    attribs += [element.attrs]
-    # print(attribs)
     del attribs[0]
     xpath = ''
     for index,val in enumerate(path):
@@ -34,16 +29,16 @@ def get_path(element):
         for key,val in attribs[index].items():
             xpath += '[@' + str(str(key) + '=\"' + str(val) + '\"]')
         xpath += '/'
-    return xpath
-
+    return xpath[:-1]
 
 if __name__ == "__main__":
-        file = 'Columns/column7.xml'
+        file = 'Columns/Count/column9.xml'
+        bill_file = 'Bills\OnDemandBillRun-9910995780.xml'
         roots = get_root_elements(file)
-        # print(roots)
-        tree = ET.parse(file)
+        tree = ET.parse(bill_file)
         b = tree.getroot()
         for root in roots:
             a = get_path(root)
             print(a)
-            # print(b.find(a).attrib)
+        #     c = b.find(a)
+        #     print(c)
