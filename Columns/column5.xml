@@ -1,9 +1,0 @@
-<Document>
-<Invoice>
-  <InvHeader>
-    <Totals>
-      <MonAmnt Type="TotalAmount">TotalAmount</MonAmnt>
-    </Totals>
-  </InvHeader>
-</Invoice>
-</Document>

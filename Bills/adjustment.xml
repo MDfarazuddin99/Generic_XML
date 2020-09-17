@@ -99,7 +99,26 @@
                         <Amounts>
                             <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
                             <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
-                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.10</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
+                        </Amounts>
+                        <FinancialHeaderExternalId SensitiveTag="FINANCIAL-HEADER-EXTERNAL-ID">asdasd4534</FinancialHeaderExternalId>
+                    </FinancialHeader>
+                    <FinancialHeader TransactionId="6a144da5-4669-49e1-8680-dc1fb11510d4" TransactionGroups="BILLINGPERIOD">
+                        <TransactionSource>efwerwer76867876</TransactionSource>
+                        <CustomerExternalId SensitiveTag="INVOICE-IDENTIFIER">390000390007</CustomerExternalId>
+                        <AccountExternalId>BillingAccountExternalId</AccountExternalId>
+                        <FinancialHeaderStatus>CLOSED</FinancialHeaderStatus>
+                        <Dates>
+                            <Date Type="ENTRY_DATE" Zone="Europe/Stockholm">2020-09-04T07:11:00.030+02:00</Date>
+                            <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-09-04T07:10:42.535+02:00</Date>
+                        </Dates>
+                        <Amounts>
+                            <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.21</MonAmnt>
                             <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
                             <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
                             <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">23.00</MonAmnt>
@@ -148,7 +167,9 @@
                             <Date Type="TRANSACTION_DATE" Zone="Europe/Stockholm">2020-03-01T01:00:00.000+01:00</Date>
                         </Dates>
                         <Amounts>
+                          <!-- LastMonthPending -->
                             <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">11.15</MonAmnt>
+                          <!-- LastMonthBill -->
                             <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">68.15</MonAmnt>
                             <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
                             <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
@@ -180,7 +201,7 @@
                         <Amounts>
                             <MonAmnt Type="OPEN_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
                             <MonAmnt Type="ORIGINAL_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
-                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
+                            <MonAmnt Type="OPEN_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.10</MonAmnt>
                             <MonAmnt Type="ORIGINAL_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">34.00</MonAmnt>
                             <MonAmnt Type="EFFECTIVE_DEBIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">0.00</MonAmnt>
                             <MonAmnt Type="EFFECTIVE_CREDIT" Currency="usd" NrDecimals="2" SensitiveTag="TRANSACTION-AMOUNT">34.00</MonAmnt>

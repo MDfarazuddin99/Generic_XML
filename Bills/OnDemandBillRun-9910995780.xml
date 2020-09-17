@@ -59,6 +59,14 @@
                             <Status FromDate="2020-05-10T03:00:01.000+02:00" ToDate="2020-07-22T09:56:21.189+02:00">ProductActive</Status>
                         </Statuses>
                     </Product>
+                    <Product Id="2DA50B37D1447A6A8B016DEE2D40E0F">
+                        <Name>PODepositCharge02</Name>
+                        <Description></Description>
+                        <Statuses>
+                            <Status FromDate="2020-05-10T03:00:01.000+02:00" ToDate="2020-07-22T09:56:21.189+02:00">ProductActive</Status>
+                            <Status FromDate="2020-05-10T03:00:01.000+02:00" ToDate="2020-07-22T09:56:21.189+02:00">ProductActive</Status>
+                        </Statuses>
+                    </Product>
                 </Products>
                 <Cbis>
                     <Cbi AggLevel="1">

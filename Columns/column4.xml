@@ -1,9 +1,0 @@
-<Document>
-<Invoice>
-  <InvHeader>
-    <Totals>
-      <MonAmnt Type="ExemptedTaxAmount">ExemptedTax</MonAmnt>
-    </Totals>
-  </InvHeader>
-</Invoice>
-</Document>
