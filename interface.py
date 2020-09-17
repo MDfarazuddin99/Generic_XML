@@ -2,38 +2,7 @@ import os
 import pandas as pd
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
-
-def get_root_elements(path_to_file):
-    soup = BeautifulSoup(open(path_to_file), 'xml')
-    all_elements = soup.find_all()
-
-    count_element_indices = [len(list(a.parents)) for a in all_elements]
-
-    absolute_roots_index = min(
-        (index for index, element in enumerate(count_element_indices)
-            if element == max(count_element_indices)
-        )
-    )
-
-    return all_elements[absolute_roots_index:]
-
-def get_path(element):
-    to_remove = ['[document]', 'body', 'html']
-    path = [element.name] + [e.name for e in element.parents if e.name not in to_remove]
-    path = path[::-1]
-    del path[0]
-    attribs = [element.attrs] + [e.name for e in element.parents if e.name not in to_remove]
-    attribs = attribs[::-1]
-    del attribs[0]
-    xpath = ''
-    for index,val in enumerate(path):
-        xpath += path[index]
-        try:
-            for key,val in attribs[index].items():
-                xpath += '[@' + str(str(key) + '=\"' + str(val) + '\"]')
-        except:
-            xpath += '/'
-    return './' + xpath
+from my_parser import get_leaf_elements,get_path
 
 
 if __name__ == '__main__':
@@ -42,41 +11,65 @@ if __name__ == '__main__':
     Bill_files = os.listdir(Bill_folder)
     Bill_files = [os.path.join(Bill_folder,i) for i in Bill_files]
     # print('All Bill Files\n',Bill_files)
-    Column_folder = 'Columns'
-    Column_files = os.listdir(Column_folder)
-    Column_files = [os.path.join(Column_folder,i) for i in Column_files]
-    # print('All Column Files\n',Column_files)
-    #  Getting Xpath for all the Column_files and appending into a list
-    Column_Xpaths = list()
-    for column in Column_files:
-        roots = get_root_elements(column)
-        for root in roots:
-            # print(get_path(root))
-            Column_Xpaths.append(get_path(root))
-    # print('Corresponding Column Xpaths\n',Column_Xpaths)
-    # Initalizing a dictionary to store keys as values in The Xpath
+    interface_file_path = 'interface.xml'
+    leaf_elements = get_leaf_elements(interface_file_path)
+    column_xpaths = list()
+    column_xpaths_action = list()
+    column_xpaths_action_sum = [
+    'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"]',
+    ]
+    for leaf_element in leaf_elements:
+        if '[@action="count"]' in get_path(leaf_element):
+            column_xpaths_action.append(get_path(leaf_element))
+        elif '[@action="sum"]' in get_path(leaf_element):
+            column_xpaths_action_sum.append(get_path(leaf_element))
+        else:
+            column_xpaths.append(get_path(leaf_element))
+    interface_tree= ET.parse('interface.xml')
+    interface_tree_root = interface_tree.getroot()
     Bill_dict = dict()
-    for Column_file,xpath in zip(Column_files,Column_Xpaths):
-        # print(Column_file,xpath)
-        tree = ET.parse(Column_file)
-        root = tree.getroot()
-        node = root.find(xpath)
-        Bill_dict[node.text] = []
-        # print(node.tag,node.attrib,node.text)
-    # print('Bill Dictionary\n',Bill_dict)
-    # Nested Loop for filling up the Dictionary
-    for Column_file,xpath in zip(Column_files,Column_Xpaths):
-        # print(Column_file,xpath)
-        tree_column = ET.parse(Column_file)
-        root_column = tree_column.getroot()
-        node_column = root_column.find(xpath)
-        column_name = node_column.text
+    for xpath in column_xpaths + column_xpaths_action:
+        # print(xpath)
+        element = interface_tree_root.find(xpath)
+        # print(element.tag,element.attrib,element.text)
+        Bill_dict[element.text] = list()
+
+    for xpath in column_xpaths:
+        column = interface_tree_root.find(xpath)
+        column_name = column.text
         for Bill_file in Bill_files:
-            # print(Bill_file)
             tree_bill = ET.parse(Bill_file)
             root_bill = tree_bill.getroot()
             node_bill = root_bill.find(xpath)
-            Bill_dict[column_name].append(node_bill.text)
-    # print(Bill_dict)
+            try:
+                Bill_dict[column_name].append(node_bill.text)
+            except:
+                Bill_dict[column_name].append(None)
+
+    for xpath in column_xpaths_action:
+        column = interface_tree_root.find(xpath)
+        column_name = column.text
+        for Bill_file in Bill_files:
+            tree_bill = ET.parse(Bill_file)
+            root_bill = tree_bill.getroot()
+            node_bill = root_bill.findall(xpath.replace('[@action="count"]',''))
+            try:
+                Bill_dict[column_name].append(len(node_bill))
+            except:
+                Bill_dict[column_name].append(None)
+    Bill_dict['Adjustment'] = list()
+    for Bill_file in Bill_files:
+            tree_bill = ET.parse(Bill_file)
+            root_bill = tree_bill.getroot()
+            node_bills = root_bill.findall(column_xpaths_action_sum[0])
+            try:
+                sum=0
+                for node in node_bills:
+                    # print('--->',node.text)
+                    sum += float(node.text)
+                Bill_dict['Adjustment'].append(sum)
+            except:
+                Bill_dict['Adjustment'].append(None)
+    print(Bill_dict)
     Bill_df = pd.DataFrame(Bill_dict)
     Bill_df.to_csv('./Data.csv')
