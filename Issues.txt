@@ -1,4 +1,7 @@
 1. Handling action = "count", action = "sum"
-A1. We can perform several operations in Xpath since it is a query language.
-2. Passing all columns in one xml file
-3. Handling case of attributes not in the leaf nodes
+-> We can perform several operations in Xpath since it is a query language.
+2. Handling case of attributes not in the leaf nodes
+-> Handled
+3. If xpath element not present in bill Files
+-> need to add try and except
+4. More actions like count,sum,min,max,avg. 
