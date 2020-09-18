@@ -18,18 +18,19 @@ if __name__ == '__main__':
     column_xpaths_action_sum = [
     'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"]',
     ]
+
     for leaf_element in leaf_elements:
         if '[@action="count"]' in get_path(leaf_element):
             column_xpaths_action.append(get_path(leaf_element))
-        elif '[@action="sum"]' in get_path(leaf_element):
-            column_xpaths_action_sum.append(get_path(leaf_element))
         else:
             column_xpaths.append(get_path(leaf_element))
+
     interface_tree= ET.parse('interface.xml')
     interface_tree_root = interface_tree.getroot()
     Bill_dict = dict()
+
     for xpath in column_xpaths + column_xpaths_action:
-        # print(xpath)
+        print(xpath)
         element = interface_tree_root.find(xpath)
         # print(element.tag,element.attrib,element.text)
         Bill_dict[element.text] = list()
@@ -57,7 +58,9 @@ if __name__ == '__main__':
                 Bill_dict[column_name].append(len(node_bill))
             except:
                 Bill_dict[column_name].append(None)
+
     Bill_dict['Adjustment'] = list()
+
     for Bill_file in Bill_files:
             tree_bill = ET.parse(Bill_file)
             root_bill = tree_bill.getroot()
@@ -70,6 +73,7 @@ if __name__ == '__main__':
                 Bill_dict['Adjustment'].append(sum)
             except:
                 Bill_dict['Adjustment'].append(None)
+                
     print(Bill_dict)
     Bill_df = pd.DataFrame(Bill_dict)
     Bill_df.to_csv('./Data.csv')
