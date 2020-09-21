@@ -36,6 +36,7 @@ def get_path(element):
 
 
 if __name__ == "__main__":
+        # Testing the above functions.
         file = 'interface.xml'
         leaf_elements = get_leaf_elements(file)
         for leaf in leaf_elements:
