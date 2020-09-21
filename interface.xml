@@ -14,7 +14,7 @@
     </InvHeader>
     <Contracts>
     	<Contract action="count">NoOfContracts</Contract>
-     </Contracts>
+    </Contracts>
      <Contracts>
          <Contract>
      		<Products>
