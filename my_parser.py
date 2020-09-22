@@ -36,8 +36,19 @@ def get_path(element):
 
 
 if __name__ == "__main__":
-        # Testing the above functions.
-        file = 'interface.xml'
-        leaf_elements = get_leaf_elements(file)
-        for leaf in leaf_elements:
-            print(get_path(leaf))
+        file = 'Bills/adjustment.xml'
+        PeriodStart_path = 'Invoice/InvHeader/PeriodStart'
+        LastMonthPending_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_DEBIT"]'
+        LastMonthBill_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="ORIGINAL_DEBIT"]'
+        BillingEndDate = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/FinancialHeaderCharacteristics/Characteristic[@key="BillingEndDate"]'
+        tree = ET.parse(file)
+        root = tree.getroot()
+        a = [(i.text,i.tag) for i in root.findall(LastMonthPending_path)]
+        b = [(i.text,i.tag) for i in root.findall(LastMonthBill_path)]
+        period_start_date = root.find(PeriodStart_path).text[0:10]
+        dates = [i.text[0:10] for i in root.findall(BillingEndDate)]
+        print(a)
+        print(b)
+        for index,date in enumerate(dates):
+            if (period_start_date == date):
+                print(index,a[index])
