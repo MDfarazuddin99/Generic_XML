@@ -110,7 +110,6 @@ if __name__ == '__main__':
                     Bill_dict[key].append(len(node_bills))
                 except:
                     Bill_dict[key].append(None)
-    print(Bill_dict)
 # __________________________________Not Generic for LastMonthPending and LastMonthBill__________________________________
     # PeriodStart_xpath = 'Invoice/InvHeader/PeriodStart'
     # LastMonthPending_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_DEBIT"]'
@@ -153,6 +152,6 @@ if __name__ == '__main__':
     #         print('->LastMonthBill Error<-')
 
 
-    # print(Bill_dict)
-    # Bill_df = pd.DataFrame(Bill_dict)
-    # Bill_df.to_csv('./Data.csv')
+    print(Bill_dict)
+    Bill_df = pd.DataFrame(Bill_dict)
+    Bill_df.to_csv('./Data.csv')
