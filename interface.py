@@ -11,7 +11,6 @@ if __name__ == '__main__':
     Bill_folder = 'Bills'
     Bill_files = os.listdir(Bill_folder)
     Bill_files = [os.path.join(Bill_folder,i) for i in Bill_files]
-    # print('All Bill Files\n',Bill_files)
     interface_file_path = 'interface.xml'
     leaf_elements = get_leaf_elements(interface_file_path)
     column_xpaths = list()
@@ -22,18 +21,21 @@ if __name__ == '__main__':
 
     for leaf_element in leaf_elements:
         xpath = get_path(leaf_element)
+        # For complicated xpaths in interface file with action = count
         if '[@action="count"]' in  xpath and 'xpath' not in xpath:
             tree = ET.parse(interface_file_path)
             root = tree.getroot()
             element = root.find(xpath)
             Bill_dict[element.text] = list()
             column_xpaths_action_count.append(xpath)
+        #For simple xpaths in interface file with action = sum
         elif '[@action="sum"]' in xpath and 'xpath' not in xpath:
             tree = ET.parse(interface_file_path)
             root = tree.getroot()
             element = root.find(xpath)
             Bill_dict[element.text] = list()
             column_xpaths_action_sum.append(xpath)
+        # For complicated xpaths in interface file
         elif 'xpath' in get_path(leaf_element):
             tree = ET.parse(interface_file_path)
             root = tree.getroot()
@@ -41,6 +43,7 @@ if __name__ == '__main__':
             for element in elements:
                 Bill_dict[element.tag] = list()
                 column_dict[element.tag] = element.text
+        # For simple xpaths in interface file
         else:
             tree = ET.parse(interface_file_path)
             root = tree.getroot()
@@ -51,7 +54,7 @@ if __name__ == '__main__':
     interface_tree= ET.parse('interface.xml')
     interface_tree_root = interface_tree.getroot()
 
-
+#   For simple xpaths
     for xpath in column_xpaths:
         column = interface_tree_root.find(xpath)
         column_name = column.text
@@ -64,6 +67,7 @@ if __name__ == '__main__':
             except:
                 Bill_dict[column_name].append(None)
 
+#   For simple xpath with action = count
     for xpath in column_xpaths_action_count:
         column = interface_tree_root.find(xpath)
         column_name = column.text
@@ -76,6 +80,7 @@ if __name__ == '__main__':
             except:
                 Bill_dict[column_name].append(None)
 
+#   For simple xpath with action = sum
     for xpath in column_xpaths_action_sum:
         column = interface_tree_root.find(xpath)
         column_name = column.text
@@ -91,6 +96,7 @@ if __name__ == '__main__':
             except:
                 Bill_dict[column_name].append(None)
 
+#   For the complicated xpaths passed in interface file
     for key,val in column_dict.items():
         for Bill_file in Bill_files:
             tree_bill = ET.parse(Bill_file)
