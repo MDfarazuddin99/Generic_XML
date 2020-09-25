@@ -3,7 +3,7 @@ Generic program to read multiple xml files and convert it into a single csv file
 
 ![Block Diagram](https://github.com/MDfarazuddin99/Generic_XML/blob/master/Readme_fig1.png)
 
-### Sample interface.xml file (Most Simple Case)
+### Sample interface.xml file (Basic Case)
 ```
 <Interface>
   <Invoice>
@@ -39,9 +39,34 @@ Generic program to read multiple xml files and convert it into a single csv file
     	<Contract action="count">NoOfContracts</Contract>
     </Contracts>
   </Invoice>
+  <FinancialTransactions>
+    <FinancialTransactionGroups>
+      <FinancialTransactionGroup>
+        <FinancialHeaderType action="count">Test1</FinancialHeaderType>
+      </FinancialTransactionGroup>
+    </FinancialTransactionGroups>
+  </FinancialTransactions>
 </Interface>
 ```
-It's Corresponding xpath
+It's Corresponding xpaths  
 ```
 Interface/Invoice/Contracts/Contract[@action="count"]
+FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup/FinancialHeaderType[@action="count"]
 ```
+### For Complicated queries
+Cases where we need to filter by a sibling tags value, add the Xpath expression in the xpath tag of the interface.xml file.
+```
+<Interface>
+  <Invoice>
+    <Contracts>
+    	<Contract action="count">NoOfContracts</Contract>
+    </Contracts>
+  </Invoice>
+  <xpath>
+  <Adjustment>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"][@action="sum"]</Adjustment>
+    <Test1>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup/FinancialHeaderType[@action="count"]</Test1>
+  <Test2>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Payment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@action="sum"]</Test2>    <Test3>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@action="sum"]</Test3>
+  </xpath>
+</Interface>
+```
+Note that in the above example the value inside Ajustment, Test1, Test2 is the exact xpath and it shouldn't have any unnecessary spaces in it. 
