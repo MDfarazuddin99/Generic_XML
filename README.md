@@ -70,3 +70,10 @@ Cases where we need to filter by a sibling tags value, add the Xpath expression 
 </Interface>
 ```
 Note that in the above example the value inside Ajustment, Test1, Test2 is the exact xpath and it shouldn't have any unnecessary spaces in it. 
+### Corresponding CSV file for above case
+|FIELD1|NoOfContracts|Adjustment|Test1|Test2|Test3             |
+|------|-------------|----------|-----|-----|------------------|
+|0     |2            |1.3       |3    |92.31|147.45000000000002|
+|1     |1            |0.0       |1    |0.0  |217.5             |
+|2     |1            |0.0       |1    |0.0  |33.35             |
+|3     |1            |0.0       |1    |0.0  |780.0             |
