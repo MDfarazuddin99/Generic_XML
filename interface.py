@@ -74,7 +74,7 @@ if __name__ == '__main__':
         for Bill_file in Bill_files:
             tree_bill = ET.parse(Bill_file)
             root_bill = tree_bill.getroot()
-            node_bilsl = root_bill.findall(xpath.replace('[@action="count"]',''))
+            node_bills = root_bill.findall(xpath.replace('[@action="count"]',''))
             try:
                 Bill_dict[column_name].append(len(node_bills))
             except:

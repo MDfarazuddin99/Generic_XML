@@ -177,7 +177,17 @@
      		</Ctsbi>
      </Ctsbis>
   </Invoice>
+  <FinancialTransactions>
+    <FinancialTransactionGroups>
+      <FinancialTransactionGroup>
+        <FinancialHeaderType action="count">Test1</FinancialHeaderType>
+      </FinancialTransactionGroup>
+    </FinancialTransactionGroups>
+  </FinancialTransactions>
   <xpath>
-  <Adjustment>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"][@action="sum"]</Adjustment>
+    <Adjustment>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"][@action="sum"]</Adjustment>
+    <Test2>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup/FinancialHeaderType[@action="count"]</Test2>
+    <Test3>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Payment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@action="sum"]</Test3>
+    <Test4>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@action="sum"]</Test4>
   </xpath>
 </Interface>
