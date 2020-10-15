@@ -176,8 +176,15 @@
      		</TaxDetails>
      		</Ctsbi>
      </Ctsbis>
+  <FinancialTransactions>
+    <FinancialTransactionGroups>
+      <FinancialTransactionGroup>
+        <FinancialHeaderType action="count">Test1</FinancialHeaderType>
+      </FinancialTransactionGroup>
+    </FinancialTransactionGroups>
+  </FinancialTransactions>
   </Invoice>
   <xpath>
-  <Adjustment>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"][@action="sum"]</Adjustment>
-  </xpath>
+   <Adjustment>FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="adjustment"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_CREDIT"][@action="sum"]</Adjustment>
+  </xpath> 
 </Interface>

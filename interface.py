@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
+import pprint
 # Calling functions from Custom module name = my_parser.py
 from my_parser import get_leaf_elements,get_path
 
@@ -9,6 +10,7 @@ from my_parser import get_leaf_elements,get_path
 if __name__ == '__main__':
     # Listing all Bill Files and Column Files
     Bill_folder = 'Bills'
+    Bill_folder = input('Enter Bill Directory Name: ')
     Bill_files = os.listdir(Bill_folder)
     Bill_files = [os.path.join(Bill_folder,i) for i in Bill_files]
     interface_file_path = 'interface.xml'
@@ -18,7 +20,7 @@ if __name__ == '__main__':
     column_xpaths_action_sum = list()
     column_dict = dict()
     Bill_dict = dict()
-
+    pp = pprint.PrettyPrinter(indent=2) 
     for leaf_element in leaf_elements:
         xpath = get_path(leaf_element)
         # For complicated xpaths in interface file with action = count
@@ -41,8 +43,12 @@ if __name__ == '__main__':
             root = tree.getroot()
             elements = root.findall(xpath)
             for element in elements:
-                Bill_dict[element.tag] = list()
-                column_dict[element.tag] = element.text
+                # I think this line is not needed.
+                if element.tag != 'xpath':
+                    Bill_dict[element.tag] = list()
+                    column_dict[element.tag] = element.text
+                else:
+                    raise('You dont need the xpath tag')
         # For simple xpaths in interface file
         else:
             tree = ET.parse(interface_file_path)
@@ -97,6 +103,7 @@ if __name__ == '__main__':
                 Bill_dict[column_name].append(None)
 
 #   For the complicated xpaths passed in interface file
+    # pp.pprint(column_dict)
     for key,val in column_dict.items():
         for Bill_file in Bill_files:
             tree_bill = ET.parse(Bill_file)
@@ -117,47 +124,51 @@ if __name__ == '__main__':
                 except:
                     Bill_dict[key].append(None)
 # __________________________________Not Generic for LastMonthPending and LastMonthBill__________________________________
-    # PeriodStart_xpath = 'Invoice/InvHeader/PeriodStart'
-    # LastMonthPending_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_DEBIT"]'
-    # LastMonthBill_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="ORIGINAL_DEBIT"]'
-    # BillingEndDate_xpath = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/FinancialHeaderCharacteristics/Characteristic[@key="BillingEndDate"]'
-    #
-    # Bill_dict['LastMonthPending'] = list()
-    # Bill_dict['LastMonthBill'] = list()
-    #
-    # for Bill_file in Bill_files:
-    #     tree_bill = ET.parse(Bill_file)
-    #     root_bill = tree_bill.getroot()
-    #     node_bills = root_bill.findall(xpath)
-    #     try:
-    #         PeriodStart = tree_bill.find(PeriodStart_xpath).text
-    #         BillingEndDates = [i.text for i in tree_bill.findall(BillingEndDate_xpath)]
-    #         LastMonthPending = [i.text for i in tree_bill.findall(LastMonthPending_path)]
-    #         sum = 0
-    #         for index,date in enumerate(BillingEndDates):
-    #             if (PeriodStart[0:10] == date[0:10]):
-    #                 sum += float(LastMonthPending[index])
-    #         Bill_dict['LastMonthPending'].append(sum)
-    #     except:
-    #         print('->LastMonthPending Error<-')
-    #
-    # for Bill_file in Bill_files:
-    #     tree_bill = ET.parse(Bill_file)
-    #     root_bill = tree_bill.getroot()
-    #     node_bills = root_bill.findall(xpath)
-    #     try:
-    #         PeriodStart = tree_bill.find(PeriodStart_xpath).text
-    #         BillingEndDates = [i.text for i in tree_bill.findall(BillingEndDate_xpath)]
-    #         LastMonthBill = [i.text for i in tree_bill.findall(LastMonthBill_path)]
-    #         sum=0
-    #         for index,date in enumerate(BillingEndDates):
-    #             if (PeriodStart[0:10] == date[0:10]):
-    #                 sum += float(LastMonthBill[index])
-    #         Bill_dict['LastMonthBill'].append(sum)
-    #     except:
-    #         print('->LastMonthBill Error<-')
+    PeriodStart_xpath = 'Invoice/InvHeader/PeriodStart'
+    LastMonthPending_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_DEBIT"]'
+    LastMonthBill_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="ORIGINAL_DEBIT"]'
+    BillingEndDate_xpath = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/FinancialHeaderCharacteristics/Characteristic[@key="BillingEndDate"]'
+    
+    Bill_dict['LastMonthPending'] = list()
+    Bill_dict['LastMonthBill'] = list()
+    
+    for Bill_file in Bill_files:
+        tree_bill = ET.parse(Bill_file)
+        root_bill = tree_bill.getroot()
+        node_bills = root_bill.findall(xpath)
+        try:
+            PeriodStart = tree_bill.find(PeriodStart_xpath).text
+            BillingEndDates = [i.text for i in tree_bill.findall(BillingEndDate_xpath)]
+            LastMonthPending = [i.text for i in tree_bill.findall(LastMonthPending_path)]
+            sum = 0
+            for index,date in enumerate(BillingEndDates):
+                if (PeriodStart[0:10] == date[0:10]):
+                    sum += float(LastMonthPending[index])
+            Bill_dict['LastMonthPending'].append(sum)
+        except:
+            Bill_dict['LastMonthPending'].append(None)
+            print('->LastMonthPending Error<-')
+    
+    for Bill_file in Bill_files:
+        tree_bill = ET.parse(Bill_file)
+        root_bill = tree_bill.getroot()
+        node_bills = root_bill.findall(xpath)
+        try:
+            PeriodStart = tree_bill.find(PeriodStart_xpath).text
+            BillingEndDates = [i.text for i in tree_bill.findall(BillingEndDate_xpath)]
+            LastMonthBill = [i.text for i in tree_bill.findall(LastMonthBill_path)]
+            sum=0
+            for index,date in enumerate(BillingEndDates):
+                if (PeriodStart[0:10] == date[0:10]):
+                    sum += float(LastMonthBill[index])
+            Bill_dict['LastMonthBill'].append(sum)
+        except:
+            Bill_dict['LastMonthBill'].append(None)
+            print('->LastMonthBill Error<-')
 
 
-    print(Bill_dict)
+    
+    pp.pprint(Bill_dict)
+
     Bill_df = pd.DataFrame(Bill_dict)
     Bill_df.to_csv('./Data.csv')
