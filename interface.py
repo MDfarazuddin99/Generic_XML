@@ -20,11 +20,13 @@ if __name__ == '__main__':
     column_xpaths_action_sum = list()
     column_dict = dict()
     Bill_dict = dict()
-    pp = pprint.PrettyPrinter(indent=2) 
+    pp = pprint.PrettyPrinter(indent=2)
     for leaf_element in leaf_elements:
         xpath = get_path(leaf_element)
+        print(xpath)
         # For complicated xpaths in interface file with action = count
         if '[@action="count"]' in  xpath and 'xpath' not in xpath:
+            print('ACTION = COUNT ',xpath)
             tree = ET.parse(interface_file_path)
             root = tree.getroot()
             element = root.find(xpath)
@@ -80,7 +82,7 @@ if __name__ == '__main__':
         for Bill_file in Bill_files:
             tree_bill = ET.parse(Bill_file)
             root_bill = tree_bill.getroot()
-            node_bilsl = root_bill.findall(xpath.replace('[@action="count"]',''))
+            node_bills = root_bill.findall(xpath.replace('[@action="count"]',''))
             try:
                 Bill_dict[column_name].append(len(node_bills))
             except:
@@ -128,10 +130,10 @@ if __name__ == '__main__':
     LastMonthPending_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="OPEN_DEBIT"]'
     LastMonthBill_path = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/Amounts/MonAmnt[@Type="ORIGINAL_DEBIT"]'
     BillingEndDate_xpath = 'FinancialTransactions/FinancialTransactionGroups/FinancialTransactionGroup[FinancialHeaderType="Invoice"]/FinancialHeaders/FinancialHeader/FinancialHeaderCharacteristics/Characteristic[@key="BillingEndDate"]'
-    
+
     Bill_dict['LastMonthPending'] = list()
     Bill_dict['LastMonthBill'] = list()
-    
+
     for Bill_file in Bill_files:
         tree_bill = ET.parse(Bill_file)
         root_bill = tree_bill.getroot()
@@ -148,7 +150,7 @@ if __name__ == '__main__':
         except:
             Bill_dict['LastMonthPending'].append(None)
             print('->LastMonthPending Error<-')
-    
+
     for Bill_file in Bill_files:
         tree_bill = ET.parse(Bill_file)
         root_bill = tree_bill.getroot()
@@ -167,7 +169,7 @@ if __name__ == '__main__':
             print('->LastMonthBill Error<-')
 
 
-    
+
     pp.pprint(Bill_dict)
 
     Bill_df = pd.DataFrame(Bill_dict)
